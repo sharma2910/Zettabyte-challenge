@@ -1,0 +1,17 @@
+.container{
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+
+    h1{
+        align-self: center;
+    }
+}
+
+.dialog{
+    align-self: flex-end;
+}
+
+.list-table{
+    margin: 30px 0px;
+}

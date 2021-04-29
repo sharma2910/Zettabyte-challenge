@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<mat-dialog-content class="mat-typography">
+    <form class="movie-form" [formGroup]="movieForm" submit="saveMovie()">
+        <mat-form-field class="full-width">
+            <input type="text" matInput formControlName="title" placeholder="Title">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input type="number" matInput formControlName="episodes" placeholder="Episodes">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input type="text" matInput formControlName="information" placeholder="Information URL">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input type="text" matInput formControlName="watch" placeholder="Watch URL">
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button mat-dialog-close color="accent">Cancel</button>
+    <button mat-raised-button [disabled]="!movieForm.valid" [mat-dialog-close]="true" cdkFocusInitial color="primary"
+        (click)="executeAction()">Submit</button>
+</mat-dialog-actions>
